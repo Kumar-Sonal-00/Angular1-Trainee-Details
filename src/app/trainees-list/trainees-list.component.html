@@ -1,0 +1,21 @@
+<h1>Trainee List</h1>
+<table>
+    <thead>
+        <tr>
+            <th> name </th>
+            <th> technology </th>
+            <th> course_completed </th>
+            <th> grade </th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let Details of Trainees">
+            <td>{{Details.name}}</td>
+            <td>{{Details.technology}}</td>
+            <td>{{Details.course_completed}}</td>
+            <td *ngIf="Details.course_completed">{{Details.grade}}</td>
+            <td *ngIf="!Details.course_completed">-</td>
+        </tr>
+    </tbody>
+</table>
